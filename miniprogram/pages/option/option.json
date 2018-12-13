@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "my-component-1": "stylechange/style1/style1"
+
+    }
+}

@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!--
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>-->
+<view class='body body-{{skin}}'>
+<cover-view class='cover-view'>汇率
+</cover-view>
+<form>
+    <view class='view-line view-line-{{skin}}'>
+      <view class='view-money'>
+        <picker class='picker picker-{{skin}}' bindchange='bindMoneyChange' data-a='left' value='{{left}}' range='{{money}}'>
+        <view class='money-class'>{{money[left]}}<view class='view-triangle'></view></view>
+        
+        </picker>
+        <image src='{{img[left]}}' class='country-img'></image>
+      </view>
+
+      <input name='input1' class='money-input money-input-{{skin}}' type='number' onkeyup="value=value.replace(/[^\d]/g,'')" 
+      value='{{inputvalue1}}' placeholder='1.0000' bindinput="bindMoneyInput"></input>
+    </view>
+    <view class='view-line view-line-{{skin}}'>
+      <view class='view-money'>
+            <picker class='picker picker-{{skin}}' bindchange='bindMoneyChange' data-a='right' value='{{right}}' range='{{money}}'>
+          <view class='money-class '>{{money[right]}}<view class='view-triangle'></view></view>
+        </picker>
+        <image src='{{img[right]}}' class='country-img'></image>
+      </view>
+      <input name="input2" id="input2" class='money-input money-input-{{skin}}' type='number' onkeyup="value=value.replace(/[^\d]/g,'')" placeholder='{{placeholder}}' bindinput="bindMoneyInput" value='{{inputvalue2}}'></input>
+    </view>
+  </form>
+</view>

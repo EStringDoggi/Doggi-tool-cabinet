@@ -1,0 +1,71 @@
+<!--pages/picture/picture.wxml-->
+<view class='body body-{{skin}}'>
+  <view class='cover-view-1'>表情包配字</view>
+<view>
+  <image src='{{imgurl}}' bindload='bindimageload' style='display:none'></image>
+    <canvas canvas-id='canvas-pic' class='canvas-img' style='height:{{canvasHeight}}rpx'>
+      <canvas canvas-id='canvas-text' class='canvas-text' bindtouchstart='canvasmovestart' bindtouchmove='canvasmoveon' bindtouchend='canvasmoveout' disable-scroll='true'>
+      <!--选择表情包盒子-->
+        <cover-view class='chooseEmoPicView'>
+          <!--盒子-->
+          <cover-view class='EmoPicBox' style='height:{{EmoHeight}}'>
+            <!--图片盒子-->
+            <cover-view class='chooseEmoPic' bindscrolltolower='scrolltolower'>
+              <block wx:for="{{EmoPic}}">
+                <cover-image class='emoPic' src="{{item.url}}" bindtap='bindEmoPicChoose' data-src="{{item.url}}" />
+              </block>
+            </cover-view>
+          
+            <!--按钮盒子-->
+            <cover-view class='EmoBtnBox'>
+              <cover-view style='disable:block'>
+                <button class=' emoPicUpload' bindtap='bindAddEmo'>
+                <cover-view style='margin:0 30rpx'>相册</cover-view>
+                </button>
+                <button class=' emoPicUpload' bindtap='bindInsertEmo'>
+                <cover-view style='margin:0 30rpx'>上传</cover-view>
+                </button>
+              </cover-view>
+            </cover-view>
+          </cover-view>
+
+        <button class='empPicButton' bindtap='bindEmoPicbutton'>选择图片{{icon}}</button>
+      </cover-view>
+      
+      <button class='deleteImgBtn' style='display:{{ClearCanvasHidden}}' bindtap='bindcanvasclear'></button>
+      <cover-image src='/img/icon/icon_04.png' class='deleteImg' style='display:{{ClearCanvasHidden}}'bindtap='bindcanvasclear'></cover-image>
+      <cover-view class='deleteImgText' bindtap='bindcanvasclear' style='display:{{ClearCanvasHidden}}'>清空画布</cover-view>
+
+      </canvas>
+    </canvas>
+  </view>
+<!--文本框-->
+  <view class='view-item view-{{skin}}'>
+    <view class='text'>文字内容：</view>
+    <input class='input-text' type='text' bindinput='textinput' placeholder='输入需要配入的文字'></input>
+<!--文本大小-->
+    <view class='view-item view-{{skin}}'>
+      <picker class='picker' range='{{fontsize}}' bindchange='bindsizechange'>
+       <view class='text'> 文字大小:</view>
+       <view class='picker-text'>{{fontsize[sizeindex]}}px</view>
+      </picker>
+    </view>
+<!--文本颜色-->
+    <view class='view-item view-{{skin}}'>
+      <picker class='picker' range='{{fontcolorrange}}' bindchange='bindcolorchange'>
+        <view class='text'>文字颜色：</view>
+        <view class='picker-text'> {{fontcolorrange[colorIndex]}}</view>
+      </picker>
+    </view>
+<!--生成文本-->
+    <button class='button' bindtap='canvasaddtext' >添加文字</button>
+<!--清空-->
+    <button class='button cleartext' bindtap='canvascleartext'>清除文字</button>
+<!--保存-->
+    <button type='primary' class='button' bindtap='canvaspicsave'>保存图片</button>
+
+<!--测试-->
+    <!--<image src='{{tempfile}}' style=' width:200px; height:200px'></image>-->
+  </view>
+  
+</view>
