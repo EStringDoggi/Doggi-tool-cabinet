@@ -1,2 +1,2 @@
-hello,this is EstringDoggi,im the first time to use gitHub
+hello,this is EstringDoggi
 test now..
