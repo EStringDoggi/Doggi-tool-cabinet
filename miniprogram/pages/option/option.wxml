@@ -1,0 +1,11 @@
+<!--pages/option/option.wxml-->
+<view class='body body-{{skin}}'>
+  <view>
+    <my-component-1 />
+    <navigator url='stylechange/stylechange'><view class='view-line view-line-{{skin}} viewfirst'>主题变更</view></navigator> 
+    <navigator url='userUploadPic/userUploadPic'><view class='view-line view-line-{{skin}} '>管理我上传的表情</view></navigator> 
+   <view class='view-line view-line-{{skin}}'><button open-type='contact' class='button-nostyle button-{{skin}} viewfirst' type='default-light'>意见反馈</button></view>
+    <navigator url='about/about'>
+    <view class='view-line view-line-{{skin}}'>关于小程序</view></navigator>
+  </view>
+</view>

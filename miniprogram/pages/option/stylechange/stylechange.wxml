@@ -1,0 +1,5 @@
+<!--pages/option/stylechange/stylechange.wxml-->
+<view class='body body-{{skin}}'>
+  <view class='cover-view-1'>主题变更</view>
+  <view class='view-line view-line-{{skin}} viewfirst'>浅色系<switch checked='{{skinSwitch}}' bindchange='BindswitchChange' class='switch'></switch></view>
+</view>

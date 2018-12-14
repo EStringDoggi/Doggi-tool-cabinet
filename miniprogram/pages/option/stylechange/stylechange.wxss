@@ -1,0 +1,7 @@
+/* pages/option/stylechange/stylechange.wxss */
+
+@import "/pages/option/option.wxss";
+.switch{float: right; margin-right: 50rpx}
+
+
+

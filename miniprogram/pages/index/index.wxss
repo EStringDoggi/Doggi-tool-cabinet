@@ -1,0 +1,15 @@
+/**index.wxss**/
+/*page{ background-color:rgb(55, 53, 68)}*/
+.body{ width: 100%;height: 100vh }
+  .body-light{ background-color: rgb(240, 240, 240)}
+  .body-dark{ background-color: #474747}
+.cover-view{  width: 100%; height: 10vh;margin-top: 0px; text-align: center; line-height: 10vh; color: #fff;background-color: #0080FF; font-size: 30rpx; font-weight: bold}
+
+.pageBox{display: flex}
+.pageLink{text-align: center;width: 50%;height: 300rpx;line-height: 300rpx;margin: 30rpx;color: #fff;font-size: 30rpx;border-radius: 10rpx}
+.color1{background-color: 	#EA7500}
+.color2{background-color: 	#73BF00}
+.color3{background-color: 	#0080FF}
+.color4{background-color: 	#CA8EC2}
+
+.icon{width: 90rpx;height: 90rpx;vertical-align: middle;display: inline-block}

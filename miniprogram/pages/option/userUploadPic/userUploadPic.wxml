@@ -1,0 +1,20 @@
+<!--pages/option/userUploadPic/userUploadPic.wxml-->
+<view class='body body-{{skin}}'>
+  <view class='cover-view-1'>管理我上传的表情</view>
+
+  <view class='nothing' style='display:{{nothing}}'>
+    <image src='/img/icon/icon_nothing.png' style='width:300rpx;height:300rpx;max-width:356px;margin:auto;'></image>
+  </view>
+
+  <view>
+    <block wx:for='{{PicUrl}}' wx:key='PicUrl'>
+      <!--行-->
+      <view class='PicLineView'>
+        <image src='{{item.url}}' class='image'></image>
+        <view data-item='{{item._id}}' data-index='{{index}}' data-url='{{item.url}}' class='delBtn' bindtap='bindDelBtn'>
+          <image src='/img/icon/icon_cancel2.png' style='width:100%;height:100%;'></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

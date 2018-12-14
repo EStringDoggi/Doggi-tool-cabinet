@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/exchangerate/exchangerate",
+    "pages/index/daycount/daycount",
+    "pages/index/picture/picture",
+    "pages/index/draw/draw",
+    "pages/option/option",
+    "pages/option/stylechange/stylechange",
+    "pages/option/suggest/suggest",
+    "pages/option/about/about",
+    "pages/option/userUploadPic/userUploadPic"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0080FF",
+    "navigationBarTitleText": "土狗工具箱",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/icon/icon_01.png",
+        "selectedIconPath": "img/icon/icon_01_select.png"
+      },
+      {
+        "pagePath": "pages/option/option",
+        "text": "设置",
+        "iconPath": "img/icon/icon_07.png",
+        "selectedIconPath": "img/icon/icon_07_select.png"
+      }
+    ]
+  }
+}

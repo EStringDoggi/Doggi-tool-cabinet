@@ -1,0 +1,3 @@
+<!--pages/option/suggest/suggest.wxml-->
+<contact-button type="default-dark" 
+ size="25"></contact-button>
